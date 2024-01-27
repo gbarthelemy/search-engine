@@ -3,8 +3,10 @@
 Demo project for a corporate search engine.
 
 It is based on 2 springboot applications :
-- 1 receiver to index documents in repository
-- 1 api to request result
+- search-engine-receiver : 1 receiver to index documents in repository
+- search-engine-api : 1 api to request result
+
+![diagram.svg](resources%2Fdiagram.svg)
 
 ## 🧱 Dependencies
 
