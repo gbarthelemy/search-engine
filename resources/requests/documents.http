@@ -1,0 +1,19 @@
+
+###
+POST http://localhost:8080/documents
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "document 1",
+  "type": "image",
+  "description": "une image",
+  "url": "http://localhost/mon-image",
+  "tags": [
+    "image",
+    "guillaume"
+  ]
+}
+
+###
+GET http://localhost:8080/documents/1

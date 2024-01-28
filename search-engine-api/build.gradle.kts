@@ -26,6 +26,7 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 
 	implementation(project(":search-engine-domain"))
+	implementation(project(":search-engine-repository"))
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
