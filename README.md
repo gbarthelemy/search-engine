@@ -3,6 +3,7 @@
 Demo project for a corporate search engine.
 
 It is based on 2 springboot applications :
+
 - search-engine-receiver : 1 receiver to index documents in repository
 - search-engine-api : 1 api to request result
 
@@ -10,10 +11,11 @@ It is based on 2 springboot applications :
 
 ## 🧱 Dependencies
 
-- Springboot reactive web (for receiver to be able to consume a large set of messages without blocking) 
+- Springboot reactive web (choosen for ability to handle a large set of workload without blocking -> search-engine-receiver)
 - Kafka
 - ElasticSearch
 - Lombok
+- Springdoc OpenAPI 3
 
 ## 🚀 Local run
 
@@ -22,15 +24,25 @@ It is based on 2 springboot applications :
 - Docker installed (and docker-compose)
 - Java 21
 
-//TODO setup a docker-compose starting Elasticsearch & Kafka
+```bash
+docker-compose up -d # start Elasticsearch & Kafka
+```
 
-### Start services
+### Start API
 
-//TODO bootRun listener and api
+```bash
+./gradlew bootRun -p search-engine-api
+```
+
+Swagger API documention is provided at : [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+### Start Receiver
+
+//TODO
 
 ### Test scenario
 
-//TODO index a new document
+//TODO 1. index a new document from publishing message in document queue
 
-//TODO search result from API request
+//TODO 2. search result from API request
 

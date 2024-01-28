@@ -21,6 +21,8 @@ repositories {
 	mavenCentral()
 }
 
+gradle.extra["springdocVersion"] = "2.3.0"
+
 dependencies {
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
@@ -28,6 +30,8 @@ dependencies {
 	implementation(project(":search-engine-domain"))
 	implementation(project(":search-engine-repository"))
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+
+	implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:${gradle.extra["springdocVersion"]}")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
